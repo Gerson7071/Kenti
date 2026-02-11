@@ -1,0 +1,28 @@
+# Node.js
+node_modules/
+
+# dotenv environment variable files
+.env.local
+
+# macOS
+.DS_Store
+
+# build directories
+build/
+dist/
+
+# logs
+logs
+*.log
+
+# runtime data
+pids
+*.pid
+
+# cache
+.cache/
+.caches/
+
+# IDE files
+.idea/
+.vscode/
