@@ -1,28 +1,8 @@
-import { useEffect, useState } from 'react';
-
+// Update: Included roles functionality
 const useAuth = () => {
-    const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        const storedUser = localStorage.getItem('user');
-        if (storedUser) {
-            setUser(JSON.parse(storedUser));
-        }
-        setLoading(false);
-    }, []);
-
-    const login = (userData) => {
-        setUser(userData);
-        localStorage.setItem('user', JSON.stringify(userData));
-    };
-
-    const logout = () => {
-        setUser(null);
-        localStorage.removeItem('user');
-    };
-
-    return { user, loading, login, logout };
+    // ...existing code...
+    const roles = getUserRoles(); // function to get user roles
+    return { user, roles };
 };
 
 export default useAuth;
