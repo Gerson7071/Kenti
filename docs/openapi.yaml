@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: Kenti API
+  description: API specification for Kenti
+  version: 1.0.0
+paths:
+  /endpoint:
+    get:
+      summary: Retrieve endpoint information
+      description: Returns information about the specified endpoint.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                        name:
+                          type: string
